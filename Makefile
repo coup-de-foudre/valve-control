@@ -11,3 +11,15 @@ test-image: Dockerfile.test
 
 image: Dockerfile
 	docker build -f Dockerfile -t $(IMAGE) .
+
+.PHONY: daemon
+daemon:
+	sudo cp ./deploy/valve-control.service /lib/systemd/system/valve_control.service
+	sync
+	sudo systemctl daemon-reload valve_control
+	sudo systemctl enable
+	sudo systemctl start valve_control
+
+.PHONY: logs
+logs:
+	sudo journalctl --follow -n 50 _SYSTEMD_UNIT=valve_control.service
