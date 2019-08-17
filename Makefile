@@ -23,3 +23,4 @@ daemon:
 .PHONY: logs
 logs:
 	sudo journalctl --follow -n 50 _SYSTEMD_UNIT=valve_control.service
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"

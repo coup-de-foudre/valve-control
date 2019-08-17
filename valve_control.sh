@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-
-python3 -m valve_control.relay_controller
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+PYTHONAPATH=${DIR}:${PYTHONPATH} python3 -m valve_control.relay_controller
