@@ -14,7 +14,7 @@ image: Dockerfile
 
 .PHONY: daemon
 daemon:
-	sudo cp ./deploy/valve-control.service /lib/systemd/system/valve_control.service
+	sudo cp ./deploy/valve_control.service /lib/systemd/system/valve_control.service
 	sync
 	sudo systemctl daemon-reload valve_control
 	sudo systemctl enable
