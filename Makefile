@@ -17,7 +17,7 @@ daemon:
 	sudo cp ./deploy/valve_control.service /lib/systemd/system/valve_control.service
 	sync
 	sudo systemctl daemon-reload
-	sudo systemctl enable
+	sudo systemctl enable valve_control
 	sudo systemctl start valve_control
 
 .PHONY: logs
