@@ -16,7 +16,7 @@ image: Dockerfile
 daemon:
 	sudo cp ./deploy/valve_control.service /lib/systemd/system/valve_control.service
 	sync
-	sudo systemctl daemon-reload valve_control
+	sudo systemctl daemon-reload
 	sudo systemctl enable
 	sudo systemctl start valve_control
 
