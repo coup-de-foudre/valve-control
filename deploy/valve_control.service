@@ -2,7 +2,7 @@
 Description=CDF Theophany Valve Control
 
 [Service]
-ExecStart=/home/pi/valve-control/valve_control.sh
+ExecStart=/bin/bash /home/pi/valve-control/valve_control.sh
 Restart=always
 RestartSec=1
 KillSignal=SIGINT
