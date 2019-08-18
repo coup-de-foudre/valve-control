@@ -265,7 +265,7 @@ class MIDIRelayController(RelayController):
 
         if control & self.CONTROL_MASK == self.CONTROL_NOTE_OFF:
             # self.set_value(self.base_value)
-            _logger.debug("Note off signal ignored ... ")
+            _logger().debug("Note off signal ignored ... ")
             return
         elif control & self.CONTROL_MASK == self.CONTROL_NOTE_ON:
             channel = (control & self.CHANNEL_MASK) + 1  # Human channels 1-indexed
